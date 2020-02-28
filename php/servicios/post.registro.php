@@ -42,9 +42,9 @@ $sql = "INSERT INTO registro(nombre, apellido, dni, email, cod, telefono, develo
 
 		//Seccion de envio de mail de registro
 		$destinatario = $request['email'];
-		$smtpHost = "mail.afsa.com.ar";  // Dominio alternativo brindado en el email de alta 
-		$smtpUsuario = "comunicaciones@afsa.com.ar";  // Mi cuenta de correo
-		$smtpClave = "Al1s35fanl031";  // Mi contraseña
+		$smtpHost = "";  // Dominio alternativo brindado en el email de alta 
+		$smtpUsuario = "";  // Mi cuenta de correo
+		$smtpClave = "";  // Mi contraseña
 
 		$mail = new PHPMailer();
 		$mail->IsSMTP();
@@ -62,7 +62,7 @@ $sql = "INSERT INTO registro(nombre, apellido, dni, email, cod, telefono, develo
 		$mail->FromName = 'DevTuc';
 		$mail->AddAddress($destinatario);
 
-		$mail->addCC('pmarino@afsa.com.ar');
+		$mail->addCC('pmarino2013@gmail.com');
 
 
 		$mail->Subject = "Registro de ".$request['name']; // Este es el titulo del email.
