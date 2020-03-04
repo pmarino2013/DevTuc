@@ -1,132 +1,116 @@
-
 <div class="App-header">
     <div class="container animated fadeIn">
         <div class="row">
-            <div class="col-6">
+            <div class="col-md-6">
                 <h1>Formulario de registro</h1>
                 <p>Al registrarte accederás a beneficios para la comunidad.</p>
 
                 <div class="App-image">
-                     <img class="figure-img img-fluid rounded" src="images/devs.png" alt="developers"></img>
+                    <img class="figure-img img-fluid rounded" src="images/devs.png" alt="developers"></img>
                 </div>
-               
+
             </div>
-            <div class="col-6">
+            <div class="col-md-6">
                 <form name="FrmRegistro" ng-submit="guardarForm(dato,FrmRegistro )" novalidate="novalidate" style="font-size:15px;">
-                   <div class="row">
-                    <div class="col-6">
-                        <div class="form-group">
-                   
-                            <label><strong><span style="color:red;">* </span>Nombre</strong></label>
-                            <input type="text"
-                                class="form-control" 
-                                ng-model="dato.name"
-                                name="nombre"
-                                required>
-                 
-                        </div>
-                    </div>
-                    <div class="col-6">
-                         <div class="form-group">
-                            <label ><strong><span style="color:red;">* </span>Apellido</strong></label>
-                            <input type="text" class="form-control" 
-                            ng-model="dato.apellido"
-                            name="apellido"
-                            required>
-                         </div>
-                    </div>
-                        
-                    </div>
                     <div class="row">
-                        <div class="col-4">
-                        <div class="form-group">
-                            <label ><strong><span style="color:red;">* </span>DNI</strong></label>
-                            <input type="text" class="form-control"
-                            ng-model="dato.dni"
-                            name="dni"
-                            ui-mask="99999999"
-                            ui-mask-err-type="mask"
-                            required>
-                         </div>
-                            
-                        </div>
-                        <div class="col-8">
-                        <div class="form-group">
-                            <label ><strong><span style="color:red;">* </span>Email</strong></label>
-                            <input type="email" class="form-control" placeholder="email@mail.com" 
-                            ng-model="dato.email"
-                            name="email"
-                            required>
-                         </div>
-                            
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-3">
-                        <div class="form-group">
-                            <label ><strong><span style="color:red;">* </span>Cod. área</strong></label>
-                            <input type="text" class="form-control"  
-                            ng-model="dato.cod"
-                            name="code"
-                            ui-mask="9999"
-                            ui-mask-err-type="mask"
-                            required>
-                         </div>
-                            
-                        </div>
-                        <div class="col-9">
-                        <div class="form-group">
-                            <label ><strong><span style="color:red;">* </span>Teléfono</strong></label>
-                            <input type="text" class="form-control"  
-                            ng-model="dato.telefono"
-                            name="telefono"
-                            ui-mask="999-999999"
-                            ui-mask-err-type="mask"
-                            required>
-                         </div>
-                            
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-3">
-                            <span ><strong>Developer</strong></span>
-                        </div>
-                        <div class="col-9">
+                        <div class="col-6">
                             <div class="form-group">
-                                
 
-                                
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="radio" id="radio1" ng-model="dato.radio" value="Si" checked>
-                              <label class="form-check-label">Si</label>
+                                <label><strong><span style="color:red;">* </span>Nombre</strong></label>
+                                <input type="text" class="form-control" ng-model="dato.name" name="nombre" required>
+
                             </div>
-                            <div class="form-check form-check-inline">
-                              <input class="form-check-input" type="radio" name="radio" id="radio2" ng-model="dato.radio" value="No">
-                              <label class="form-check-label" >No</label>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label><strong><span style="color:red;">* </span>Apellido</strong></label>
+                                <input type="text" class="form-control" ng-model="dato.apellido" name="apellido" required>
                             </div>
-                                
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label><strong><span style="color:red;">* </span>DNI</strong></label>
+                                <input type="text" class="form-control" ng-model="dato.dni" name="dni" ui-mask="99999999" ui-mask-err-type="mask" required>
                             </div>
-                           
+
+                        </div>
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <label><strong><span style="color:red;">* </span>Email</strong></label>
+                                <input type="email" class="form-control" placeholder="email@mail.com" ng-model="dato.email" name="email" required>
+                            </div>
+
                         </div>
                     </div>
-                  <div class="form-group">
-                    <label><strong>Comentario</strong></label>
-                    <textarea class="form-control" placeholder="Puedes dejar un comentario o una consulta" name="comentario" ng-model="dato.comentario"></textarea>
-                   
-                  </div>
-                  <div style="text-align: right;">
-                    <div class="lds-spinner" ng-show="cargando"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label><strong><span style="color:red;">* </span>Cod. área</strong></label>
+                                <input type="text" class="form-control" ng-model="dato.cod" name="code" ui-mask="9999" ui-mask-err-type="mask" required>
+                            </div>
 
-                       <button type="submit" class="btn btn-info" ng-hide="cargando">Registrarse</button>
-                       <button type="reset" class="btn btn-secondary" ng-hide="cargando"><i class="fa fa-refresh" aria-hidden="true"></i></button>
-                  </div>
-                 
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+                                <label><strong><span style="color:red;">* </span>Teléfono</strong></label>
+                                <input type="text" class="form-control" ng-model="dato.telefono" name="telefono" ui-mask="999-999999" ui-mask-err-type="mask" required>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <span><strong>Developer</strong></span>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="form-group">
+
+
+
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="radio" id="radio1" ng-model="dato.radio" value="Si" checked>
+                                    <label class="form-check-label">Si</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="radio" id="radio2" ng-model="dato.radio" value="No">
+                                    <label class="form-check-label">No</label>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label><strong>Comentario</strong></label>
+                        <textarea class="form-control" placeholder="Puedes dejar un comentario o una consulta" name="comentario" ng-model="dato.comentario"></textarea>
+
+                    </div>
+                    <div style="text-align: right;">
+                        <div class="lds-spinner" ng-show="cargando">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+
+                        <button style="margin-bottom:10px;" type="submit" class="btn btn-info" ng-hide="cargando">Registrarse</button>
+                        <button style="margin-bottom:10px;" type="reset" class="btn btn-secondary" ng-hide="cargando"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+                    </div>
+
                 </form>
-                
+
             </div>
         </div>
     </div>
 </div>
-
-        
- 
